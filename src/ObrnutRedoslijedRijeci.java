@@ -12,7 +12,7 @@ public class ObrnutRedoslijedRijeci {
 	 */
 
 	Scanner inputConsole = new Scanner(System.in);
-	System.out.print("Unesite ime filea(obrnutRedoslijed): ");
+	System.out.print("Unesite ime filea(ObrnutRedoslijed): ");
 	String fileName = inputConsole.nextLine();
 	File file = new File(fileName);
 	inputConsole.close();
@@ -20,17 +20,17 @@ public class ObrnutRedoslijedRijeci {
 	if (file.exists()) {
 
 	    Scanner inputFile = new Scanner(file);
-	    
+
 	    while (inputFile.hasNextLine()) {
 		String line = inputFile.nextLine();
 		String[] words = line.split(" ");
-		
+
 		for (int i = words.length - 1; i >= 0; i--) {
 		    System.out.print(words[i] + " ");
 		}
 		System.out.println();
-		
-	    } inputFile.close();
+	    }
+	    inputFile.close();
 	} else {
 	    System.out.println("File sa tim imenom ne postoji.");
 	}
